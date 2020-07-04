@@ -54,6 +54,7 @@ public class StudentResourceResteasyTest {
     }
 
     @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
     @Path("{studentId}")
     public void deleteStudentById(@PathParam("studentId") UUID studentId) {
         studentService.deleteStudentById(studentId);
